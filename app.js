@@ -1,10 +1,12 @@
 // Sharpening the introduction column once the page loads
-const introduction = document.querySelector('.overview .description');
+const introduction = document.querySelector('#overview .description');
 introduction.style.filter = 'blur(0px)';
 
 
-// Fading the background color of nav-bar  upon scrolling certain height
+// Fading the background color of nav-bar and toggling arrow-up button upon scrolling certain height
 const navBar = document.querySelector('.main-nav');
+const overviewSection = document.getElementById('overview');
+const arrowUp = document.querySelector('.arrow-up');
 
 window.addEventListener('scroll', () => {
 
@@ -13,9 +15,16 @@ window.addEventListener('scroll', () => {
     } else {
         navBar.style.backgroundColor = 'transparent';
     }
+
+    if (window.pageYOffset >= overviewSection.offsetHeight) {
+        arrowUp.style.right = '40px';
+    } else {
+        arrowUp.style.right = '-3.5rem';
+    }
     
 });
 
+// Adding functionality to nav-bar
 const navItems = document.querySelector('.main-nav__items');
 
 navItems.addEventListener('click', event => {
@@ -29,4 +38,23 @@ navItems.addEventListener('click', event => {
             behaviour: 'smooth'
         });
     }
+});
+
+const arrowDown = document.querySelector('.arrow-down');
+const aboutSection = document.getElementById('about');
+
+arrowDown.addEventListener('click', () => {
+    window.scrollTo({
+        top: aboutSection.offsetTop - navBar.offsetHeight,
+        left: 0,
+        behavior: 'smooth'
+    });
+});
+
+arrowUp.addEventListener('click', () => {
+    window.scroll({
+        top: 0,
+        left: 0,
+        behaviour: 'smooth'
+    })
 });
