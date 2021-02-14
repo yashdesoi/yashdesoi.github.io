@@ -207,8 +207,8 @@ main {
 
 #education article {
     background-color: white;
-    width: 60%;
-    min-width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin: 15px auto;
     padding: 10px;
     border-radius: 10px;
@@ -343,7 +343,8 @@ main {
 }
 
 #contact form {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 300px;
     margin-right: 80px;
     display: flex;
