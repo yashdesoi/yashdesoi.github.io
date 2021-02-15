@@ -77,44 +77,6 @@ header::after {
     color: rgb(210, 210, 210);
 }
 
-@media (max-width: 830px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .main-nav__items {
-        overflow-y: hidden;
-        /* height: 0; */
-        padding: 0;
-        flex-direction: column;
-        align-items: center;
-        transition: height 0.3s ease-in-out;
-    }
-
-    .main-nav__item {
-        margin: 0 0 10px 0;
-        border-bottom: 1px solid white;
-    }
-
-    #contact .container {
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    }
-    #contact .container form{
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    #contact .others{
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-}
-
 /* Overview section */
 #overview {
     background-image: url('images/overview-image.jpeg');
@@ -168,7 +130,7 @@ main {
 }
 
 #about {
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
     margin: 50px auto;
     padding: 10px;
@@ -208,7 +170,7 @@ main {
 #education article {
     background-color: white;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 15px auto;
     padding: 10px;
     border-radius: 10px;
@@ -243,7 +205,8 @@ main {
 }
 
 #projects .container {
-    padding: 15px;
+    margin: 15px;
+    /* padding: 15px; */
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -253,7 +216,7 @@ main {
 .project {
     width: 330px;
     height: 500px;
-    /* margin: 0 50px 20px 0; */
+    margin: 15px;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
@@ -339,11 +302,10 @@ main {
     margin: 10px auto;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 
 #contact form {
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     height: 300px;
     margin-right: 80px;
@@ -413,6 +375,42 @@ main {
 #contact .others a {
     text-decoration: underline solid black;
     color: inherit;
+
+}
+
+
+
+@media (max-width: 830px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-nav__items {
+        overflow-y: hidden;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .main-nav__item {
+        margin: 0 0 10px 0;
+        border-bottom: 1px solid white;
+    }
+
+    #contact .container {
+        flex-direction: column;
+    }
+
+    #contact .container form{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #contact .others{
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 }
 
