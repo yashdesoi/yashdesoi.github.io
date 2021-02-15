@@ -24,6 +24,7 @@ window.addEventListener('scroll', () => {
     
 });
 
+
 // Adding functionality to nav-bar
 const navBar = document.querySelector('.main-nav');
 const navItems = document.querySelector('.main-nav__items');
@@ -41,6 +42,7 @@ navItems.addEventListener('click', event => {
     }
 });
 
+
 // Directly jump to about section
 const arrowDown = document.querySelector('.arrow-down');
 const aboutSection = document.getElementById('about');
@@ -53,6 +55,7 @@ arrowDown.addEventListener('click', () => {
     });
 });
 
+
 // Jump back to top of the document
 arrowUp.addEventListener('click', () => {
     window.scrollTo({
@@ -61,6 +64,7 @@ arrowUp.addEventListener('click', () => {
         behavior: 'smooth'
     })
 });
+
 
 // Making nav-bar responsive
 const dropdown = document.querySelector('.main-nav__items');
@@ -92,4 +96,58 @@ window.addEventListener('resize', () => {
 });
 
 
+// Requesting project's information
+const createTemplate = function(imageURL, projectName, projectDescription, projectLink, githubRepoLink) {
+    const templateOne = `
+        <article class="project">
+            <div class="photo" style="background-image: url(${imageURL})"></div>
+            <div class="description">
+                <strong>${projectName}: </strong>${projectDescription}.
+            </div>
+            <div class="links">
+                <a href="${projectLink}" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="${githubRepoLink}" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </article>
+    `;
+    
+    const templateTwo = `
+        <article class="project">
+            <div class="photo" style="background-image: url(${imageURL})"></div>
+            <div class="description">
+                <strong>${projectName}: </strong>${projectDescription}.
+            </div>
+            <div class="links">
+                <a href="${githubRepoLink}" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </article>
+    `;
 
+    if (projectLink === 'nil') {
+        return templateTwo;
+    } else {
+        return templateOne;
+    }
+};
+
+const projectContainer = document.querySelector('#projects > .container');
+
+const updateUI = function(html) {
+    projectContainer.innerHTML += html;
+};
+
+// Immediately invoked function expression
+(async function() {
+    const response = await fetch('data/projects.json');
+    const data = await response.json();
+
+    data.forEach(project => {
+        updateUI(createTemplate(project.imageURL, project.projectName, project.projectDescription, project.projectLink, project.githubRepoLink));
+    }); 
+})();
