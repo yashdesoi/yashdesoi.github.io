@@ -411,8 +411,12 @@ footer {
     justify-content: center;
 }
 
+.footer-nav__item {
+    margin: 0 4px;
+}
+
 .footer-nav__item img {
-    width: 30px;
+    width: 35px;
 }
 
 footer .description {
