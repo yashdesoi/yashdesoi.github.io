@@ -35,10 +35,6 @@ header::after {
     cursor: pointer;
 }
 
-.menu-icon:active {
-    color: rgb(210, 210, 210);
-}
-
 .menu-icon:focus {
     outline: none;
 }
@@ -49,6 +45,10 @@ header::after {
     border-radius: 2px;
     background-color: white;
     margin: 6px 0;
+}
+
+.menu-icon:hover div {
+    background-color: rgb(210, 210, 210);
 }
 
 .main-nav__items {
@@ -206,7 +206,6 @@ main {
 
 #projects .container {
     margin: 15px;
-    /* padding: 15px; */
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -459,7 +458,6 @@ footer .description {
     position: fixed;
     bottom: 40px;
     right: -3.5rem;
-    /* right: 40px; */
 }
 
 .arrow-up:active {

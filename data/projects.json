@@ -1,27 +1,27 @@
 [
     {
-        "imageURL": "images/project-images/chit-chat.png",
+        "imageURL": "images/project-images/chit-chat.PNG",
         "projectName": "Chit-Chat",
         "projectDescription": "A real-time chat application where multiple users can chat with each other. Application comes with four chatrooms, eachone isolated with one another",
         "projectLink": "nil",
         "githubRepoLink": "https://github.com/yashdesoi/Chit-Chat"
     },
     {
-        "imageURL": "images/project-images/proper-ui.png",
+        "imageURL": "images/project-images/proper-ui.PNG",
         "projectName": "Proper UI",
         "projectDescription": "JavaScript UI library which includes UI components such as tooltips, dropdowns, tabs and snackbars",
         "projectLink": "https://yashdesoi.github.io/Proper-UI/",
         "githubRepoLink": "https://github.com/yashdesoi/Proper-UI"
     },
     {
-        "imageURL": "images/project-images/online-store.png",
+        "imageURL": "images/project-images/online-store.PNG",
         "projectName": "Online Store",
         "projectDescription": "Prototype of an online grocery store which supports features like 'add to cart' and dynamic price calculation",
         "projectLink": "https://yashdesoi.github.io/Online-Grocery-Store/",
         "githubRepoLink": "https://github.com/yashdesoi/Online-Grocery-Store"
     },
     {
-        "imageURL": "images/project-images/weather-app.png",
+        "imageURL": "images/project-images/weather-app.PNG",
         "projectName": "Weather App",
         "projectDescription": "Weather application which displays the real-time weather condition of any city",
         "projectLink": "https://yashdesoi.github.io/Weather-App/",
