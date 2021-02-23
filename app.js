@@ -1,9 +1,13 @@
 // Sharpening the introduction column once the page loads
 const introduction = document.querySelector('#overview .description');
 
-window.addEventListener('load', () => {
+setTimeout(() => {
     introduction.style.filter = 'blur(0px)';
-});
+}, 2000);
+
+// window.addEventListener('load', () => {
+//     introduction.style.filter = 'blur(0px)';
+// });
 
 // Fading the background color of nav-bar and toggling arrow-up button upon scrolling certain height
 const header = document.querySelector('header');

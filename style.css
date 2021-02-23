@@ -97,7 +97,7 @@ header::after {
 
 #overview .description {
     filter: blur(10px);
-    transition: filter 0.5s linear 0.7s;
+    transition: filter 0.5s linear;
 }
 
 #overview .title {
