@@ -412,7 +412,13 @@ footer {
 }
 
 .footer-nav__item {
-    margin: 0 4px;
+    margin: 0 5px;
+}
+
+.footer-nav__item:nth-child(1) img,
+.footer-nav__item:nth-child(2) img {
+    margin-top: 3px;
+    width: 28px;
 }
 
 .footer-nav__item img {
