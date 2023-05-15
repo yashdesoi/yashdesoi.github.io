@@ -1,1 +1,1 @@
-https://www.yashdesoi.live
+https://yashdesoi.github.io
